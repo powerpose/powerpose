@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.example.powerPoseTest.jungyeol.dao.IStudentRepository">
+
+	<resultMap
+		type="com.example.powerPoseTest.jungyeol.model.Student"
+		id="studentMap">
+		<result column="stu_number" property="stuNumber" />
+		<result column="stu_name" property="stuName" />
+		<result column="stu_grade" property="stuGrade" />
+		<result column="stu_gender" property="stuGender" />
+	</resultMap>
+
+	<select id="getStuCount" parameterType="int" resultType="int">
+        <![CDATA[
+            SELECT COUNT(*) FROM student
+        ]]>
+	</select>
+
+	<select id="getStuList" resultMap="studentMap">
+        <![CDATA[
+            SELECT * FROM student
+        ]]>
+	</select>
+
+	<select id="getStuInfo" parameterType="int"
+		resultMap="studentMap">
+        <![CDATA[
+            SELECT * FROM student WHERE stu_number=#{stuNumber}
+        ]]>
+	</select>
+
+	<insert id="insertStu"
+		parameterType="com.example.powerPoseTest.jungyeol.model.Student">
+        <![CDATA[
+            INSERT INTO student (stu_number, stu_name, stu_grade, stu_gender)
+            VALUES (stu_number.nextval, #{stuName}, #{stuGrade}, #{stuGender})
+        ]]>
+	</insert>
+
+	<update id="updateStu"
+		parameterType="com.example.powerPoseTest.jungyeol.model.Student">
+        <![CDATA[
+            UPDATE student
+            SET stu_name = #{stuName}, stu_grade = #{stuGrade}, stu_gender = #{stuGender}
+            WHERE stu_number = #{stuNumber}
+        ]]>
+	</update>
+
+	<delete id="deleteStu" parameterType="int">
+        <![CDATA[
+            DELETE FROM student WHERE stu_number = #{stuNumber}
+        ]]>
+	</delete>
+</mapper>

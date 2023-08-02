@@ -1,0 +1,18 @@
+<!-- student/form.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>학생 추가</title>
+</head>
+<body>
+	<h2>학생 추가</h2>
+	<form action="/student/add" method="post" th:object="${student}">
+		<input type="text" th:field="*{stuName}" placeholder="이름" required /><br>
+		<input type="number" th:field="*{stuGrade}" placeholder="학년" min="1"
+			required /><br> <input type="text" th:field="*{stuGender}"
+			placeholder="성별" pattern="[MW]" title="'M' 또는 'W'만 입력하세요." required /><br>
+
+		<button type="submit">추가</button>
+	</form>
+</body>
+</html>
