@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="~{/include/head :: header}"></head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div class="container">
+			<form th:object="${notice}" th:action="@{/update}" method="post">
+				<input type="hidden" name="noticeId" th:value="${notice.noticeId}">
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">제목</label>
+					<input type="text" class="form-control" id="exampleFormControlInput1" name="title" th:value="${notice.title}" th:placeholder="${notice.title}">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlTextarea1" class="form-label">내용</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content" th:value="${notice.content}">[[${notice.content}]]</textarea>
+				</div>
+				<div class="d-flex justify-content-center">
+					<input class="btn btn-outline-success mx-3 width-15" type="submit" value="글 쓰기">
+					<input class="btn btn-outline-danger mx-3 width-15" type="reset" value="취소">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
