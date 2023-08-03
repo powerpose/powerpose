@@ -1,12 +1,12 @@
 // IStudentRepository.java
-package com.example.powerPoseTest.jungyeol.dao;
+package com.example.powerposetest.jungyeol.dao;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-import com.example.powerPoseTest.jungyeol.model.Student;
+import com.example.powerposetest.jungyeol.model.Student;
 
 @Repository
 @Mapper

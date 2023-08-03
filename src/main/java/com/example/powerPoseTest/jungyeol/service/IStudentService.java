@@ -1,8 +1,8 @@
-package com.example.powerPoseTest.jungyeol.service;
+package com.example.powerposetest.jungyeol.service;
 
 import java.util.List;
 
-import com.example.powerPoseTest.jungyeol.model.Student;
+import com.example.powerposetest.jungyeol.model.Student;
 
 public interface IStudentService {
     int getStuCount();

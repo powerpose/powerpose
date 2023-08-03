@@ -1,4 +1,4 @@
-package com.example.powerPoseTest.jungyeol.controller;
+package com.example.powerposetest.jungyeol.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.powerPoseTest.jungyeol.model.Student;
-import com.example.powerPoseTest.jungyeol.service.IStudentService;
+import com.example.powerposetest.jungyeol.model.Student;
+import com.example.powerposetest.jungyeol.service.IStudentService;
 
 @Controller
 @RequestMapping("/student")
