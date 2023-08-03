@@ -1,0 +1,30 @@
+<!-- student/list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>학생 목록</title>
+</head>
+<body>
+    <h2>학생 목록</h2>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>학년</th>
+            <th>성별</th>
+            <th>수정</th>
+            <th>삭제</th>
+        </tr>
+        <tr th:each="stu : ${student}">
+            <td th:text="${stu.stuNumber}"></td>
+            <td th:text="${stu.stuName}"></td>
+            <td th:text="${stu.stuGrade}"></td>
+            <td th:text="${stu.stuGender}"></td>
+            <td><a th:href="@{/student/edit/{stuNumber}(stuNumber=${stu.stuNumber})}">수정</a></td>
+            <td><a th:href="@{/student/delete/{stuNumber}(stuNumber=${stu.stuNumber})}">삭제</a></td>
+        </tr>
+    </table>
+    <br>
+    <a th:href="@{/student/add}">학생 추가</a>
+</body>
+</html>
