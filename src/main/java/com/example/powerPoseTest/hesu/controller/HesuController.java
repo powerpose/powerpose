@@ -31,7 +31,7 @@ public class HesuController {
     @PostMapping("/insert")
     public String insertHesu(@RequestParam String title, @RequestParam String context) {
         hesuService.insertHesu(title, context);
-        return "hesu/hesu";
+        return "redirect:/hesu/list";
     }
 
     @GetMapping("/detail")
@@ -50,14 +50,14 @@ public class HesuController {
 
     @PostMapping("/update")
     public String updateHesu(@RequestParam("id") int id, @RequestParam("title") String title, @RequestParam("context") String context) {
-        System.out.println("ddddddd");
         hesuService.updateHesu(id, title, context);
         return "redirect:/hesu/list";
     }
     @GetMapping("/delete")
-    public String deleteHesu(@RequestParam("id") int id, Model model) {
+    public String deleteHesu(@RequestParam("id") int id) {
+System.out.println("id");
+        System.out.println(id);
         hesuService.deleteHesu(id);
-
         return "redirect:/hesu/list";
     }
 }

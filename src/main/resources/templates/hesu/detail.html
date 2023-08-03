@@ -8,7 +8,7 @@
 </head>
 <body>
 <div style="width: 80%; margin: auto; padding-top: 20%">
-  
+
     <div class="mb-3">
         <label for="title" class="form-label">TITLE</label>
         <textarea disabled class="form-control" id="title" name="title" th:text="${hesu.title}"> </textarea>
@@ -20,11 +20,33 @@
     </div>
 
     <div style="float: right;">
-        <a th:href="@{/hesu/delete(id=${hesu.id})}" class="btn btn-danger">삭제</a>
+        <button th:onclick="delHesu()" class="btn btn-danger">삭제</button>
         <a th:href="@{/hesu/update(id=${hesu.id})}" class="btn btn-primary">수정</a>
 
     </div>
 
 </div>
+
+
+
+<script th:inline="javascript">
+    function delHesu() {
+
+        var iid = /*[[${hesu.id}]]*/;
+        console.log(iid);
+        if (!confirm('게시글을 삭제할까요?')) {
+            return false;
+        }
+
+        const formHtml = `
+                    <form id="delHesuForm" th:action="@{/hesu/delete}" method="get">
+                        <input  id="id" name="id" value=[[${hesu.id}]] text=[[${hesu.id}]] ></input>
+                    </form>`;
+        const doc = new DOMParser().parseFromString(formHtml, 'text/html');
+        const form = doc.body.firstChild;
+        document.body.append(form);
+        document.getElementById('delHesuForm').submit();
+    }
+</script>
 </body>
 </html>
