@@ -30,6 +30,7 @@
 
 
 <script th:inline="javascript">
+    /*<![CDATA[*/
     function delHesu() {
 
         var iid = /*[[${hesu.id}]]*/;
@@ -38,15 +39,21 @@
             return false;
         }
 
+        // 자바 스크립트에서 폼 만들어 보낼때 action에 타임리프 문법을 사용하면 작동하지 않는 이슈가 있었읍니다. (현웅이가 찾아줌)
         const formHtml = `
-                    <form id="delHesuForm" th:action="@{/hesu/delete}" method="get">
-                        <input  id="id" name="id" value=[[${hesu.id}]] text=[[${hesu.id}]] ></input>
+           <form id="delHesuForm" action="/hesu/delete" method="get">
+                        <input  id="id" name="id" >
                     </form>`;
         const doc = new DOMParser().parseFromString(formHtml, 'text/html');
         const form = doc.body.firstChild;
         document.body.append(form);
+        // var target =  document.getElementById('id');
+        // target.value
+        document.getElementById('id').value = iid;
         document.getElementById('delHesuForm').submit();
+        // console.log( document.getElementById('id').value);
     }
+    /*]]>*/
 </script>
 </body>
 </html>
