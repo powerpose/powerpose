@@ -1,11 +1,11 @@
-package com.example.powerPoseTest.notice.dao;
+package com.example.powerposetest.notice.dao;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-import com.example.powerPoseTest.notice.model.Notice;
+import com.example.powerposetest.notice.model.Notice;
 
 @Repository
 @Mapper
