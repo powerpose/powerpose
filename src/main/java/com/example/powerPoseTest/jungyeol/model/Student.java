@@ -1,4 +1,4 @@
-package com.example.powerPoseTest.jungyeol.model;
+package com.example.powerposetest.jungyeol.model;
 
 import lombok.Data;
 

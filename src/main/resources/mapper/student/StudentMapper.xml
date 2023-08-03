@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper
-	namespace="com.example.powerPoseTest.jungyeol.dao.IStudentRepository">
+	namespace="com.example.powerposetest.jungyeol.dao.IStudentRepository">
 
 	<resultMap
-		type="com.example.powerPoseTest.jungyeol.model.Student"
+		type="com.example.powerposetest.jungyeol.model.Student"
 		id="studentMap">
 		<result column="stu_number" property="stuNumber" />
 		<result column="stu_name" property="stuName" />
@@ -32,7 +32,7 @@
 	</select>
 
 	<insert id="insertStu"
-		parameterType="com.example.powerPoseTest.jungyeol.model.Student">
+		parameterType="com.example.powerposetest.jungyeol.model.Student">
         <![CDATA[
             INSERT INTO student (stu_number, stu_name, stu_grade, stu_gender)
             VALUES (stu_number.nextval, #{stuName}, #{stuGrade}, #{stuGender})
@@ -40,7 +40,7 @@
 	</insert>
 
 	<update id="updateStu"
-		parameterType="com.example.powerPoseTest.jungyeol.model.Student">
+		parameterType="com.example.powerposetest.jungyeol.model.Student">
         <![CDATA[
             UPDATE student
             SET stu_name = #{stuName}, stu_grade = #{stuGrade}, stu_gender = #{stuGender}

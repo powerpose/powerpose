@@ -1,12 +1,12 @@
-package com.example.powerPoseTest.jungyeol.service;
+package com.example.powerposetest.jungyeol.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.powerPoseTest.jungyeol.dao.IStudentRepository;
-import com.example.powerPoseTest.jungyeol.model.Student;
+import com.example.powerposetest.jungyeol.dao.IStudentRepository;
+import com.example.powerposetest.jungyeol.model.Student;
 
 @Service
 public class StudentService implements IStudentService {
