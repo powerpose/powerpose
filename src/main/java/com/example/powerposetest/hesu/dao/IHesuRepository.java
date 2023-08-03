@@ -1,6 +1,6 @@
-package com.example.powerPoseTest.hesu.dao;
+package com.example.powerposetest.hesu.dao;
 
-import com.example.powerPoseTest.hesu.model.Hesu;
+import com.example.powerposetest.hesu.model.Hesu;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

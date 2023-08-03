@@ -1,7 +1,7 @@
-package com.example.powerPoseTest.hesu.service;
+package com.example.powerposetest.hesu.service;
 
-import com.example.powerPoseTest.hesu.dao.IHesuRepository;
-import com.example.powerPoseTest.hesu.model.Hesu;
+import com.example.powerposetest.hesu.dao.IHesuRepository;
+import com.example.powerposetest.hesu.model.Hesu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

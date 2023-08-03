@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.powerPoseTest.notice.dao.INoticeRepository">
+<mapper namespace="com.example.powerposetest.notice.dao.INoticeRepository">
 
-	<select id="selectNoticeList" resultType="com.example.powerPoseTest.notice.model.Notice">	
+	<select id="selectNoticeList" resultType="com.example.powerposetest.notice.model.Notice">
 		<![CDATA[
 			SELECT
 				notice_id as noticeId,
@@ -11,10 +11,10 @@
 			FROM
 				notice
 		]]>
-		
+
 	</select>
-	
-	<select id="selectNotice" parameterType="int" resultType="com.example.powerPoseTest.notice.model.Notice">
+
+	<select id="selectNotice" parameterType="int" resultType="com.example.powerposetest.notice.model.Notice">
 		<![CDATA[
 			SELECT
 				notice_id as noticeId,
@@ -26,15 +26,15 @@
 				notice_id = #{noticeId}
 		]]>
 	</select>
-	
-	<insert id="insertNotice" parameterType="com.example.powerPoseTest.notice.model.Notice">
+
+	<insert id="insertNotice" parameterType="com.example.powerposetest.notice.model.Notice">
 		<![CDATA[
 		    INSERT INTO notice (notice_id, title, content)
 		    VALUES (notice_seq.nextval, #{title}, #{content})
 		]]>
 	</insert>
-	
-	<update id="updateNotice" parameterType="com.example.powerPoseTest.notice.model.Notice">
+
+	<update id="updateNotice" parameterType="com.example.powerposetest.notice.model.Notice">
 		<![CDATA[
 			UPDATE notice
 			SET
@@ -42,9 +42,9 @@
 				content = #{content}
 			WHERE
 				notice_id = #{noticeId}
-		]]>			
+		]]>
 	</update>
-	
+
 	<delete id="deleteNotice" parameterType="int">
 		<![CDATA[
 			DELETE FROM notice

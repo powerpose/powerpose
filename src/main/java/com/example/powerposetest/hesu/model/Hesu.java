@@ -1,4 +1,4 @@
-package com.example.powerPoseTest.hesu.model;
+package com.example.powerposetest.hesu.model;
 
 import lombok.Data;
 

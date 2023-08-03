@@ -1,6 +1,6 @@
-package com.example.powerPoseTest.hesu.service;
+package com.example.powerposetest.hesu.service;
 
-import com.example.powerPoseTest.hesu.model.Hesu;
+import com.example.powerposetest.hesu.model.Hesu;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.powerPoseTest.notice.model;
+package com.example.powerposetest.notice.model;
 
 import lombok.Data;
 
