@@ -14,7 +14,7 @@ import java.util.List;
 public class HesuController {
     @Autowired
     IHesuService hesuService;
-
+//merge test
     @GetMapping("/list")
     public String getAllHesu(Model model) {
         List<Hesu> hesu = hesuService.getAllHesu();
