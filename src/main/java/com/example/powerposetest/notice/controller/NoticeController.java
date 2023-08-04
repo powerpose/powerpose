@@ -1,4 +1,4 @@
-package com.example.powerposetest;
+package com.example.powerposetest.notice.controller;
 
 import java.util.List;
 
