@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<div th:replace="~{/include/head :: header}" />
+	</head>
+	<body>
+		<div class="container">
+			<table class="table text-center">
+			  <thead>
+			    <tr>
+			      <th scope="col">NO</th>
+			      <th scope="col">title</th>
+			      <th scope="col">content</th>
+			      <th scope="col">수정</th>
+			      <th scope="col">삭제</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr th:each="no : ${List}">
+					<td>[[${no.noticeId}]]</td>
+					<td>[[${no.title}]]</td>
+ 			      	<td>[[${no.content}]]</td>
+					<td><a th:href="@{/update/{noticeId}(noticeId=${no.noticeId})}">글수정</a></td>
+					<td><a th:href="@{/delete/{noticeId}(noticeId=${no.noticeId})}">글삭제</a></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<a th:href="insert">글쓰기</a>
+		</div>
+	</body>
+</html>
