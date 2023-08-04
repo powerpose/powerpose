@@ -37,7 +37,14 @@ public class HesuController {
     public String setHesu(@RequestParam("id") int id, Model model) {
         Hesu hesu = (Hesu) hesuService.getAHesu(id);
         model.addAttribute("hesu", hesu);
-        return "hesu/detail";
+        return "/hesu/detail";
+    }
+    @GetMapping("/delete")
+    public String deleteHesu(@RequestParam("id") int id) {
+        System.out.println("id");
+        System.out.println(id);
+        hesuService.deleteHesu(id);
+        return "redirect:/hesu/list";
     }
 
     @GetMapping("/update")
@@ -52,11 +59,5 @@ public class HesuController {
         hesuService.updateHesu(id, title, context);
         return "redirect:/hesu/list";
     }
-    @GetMapping("/delete")
-    public String deleteHesu(@RequestParam("id") int id) {
-System.out.println("id");
-        System.out.println(id);
-        hesuService.deleteHesu(id);
-        return "redirect:/hesu/list";
-    }
+
 }
