@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.powerPoseTest.jungah.dao.IJungahRepository">
-    <insert id="insertJungah" parameterType="String">
+<mapper namespace="com.example.powerPoseTest.IJjRepository">
+	
+	<insert id="insertJj" parameterType="com.example.powerPoseTest.jungah.model.Jj">
 		<![CDATA[
-        insert into jungah
-        values (jungah_seq.NEXTVAL, #{title}, #{context})
-        ]]>
+		    INSERT INTO jj (id, title, context)
+		    VALUES (id_seq.nextval, #{title}, #{context})
+		]]>
 	</insert>
+	
 
-    <select id="selectAllJungah" resultType="com.example.powerPoseTest.jungah.model.Jungah">
+    <select id="selectAllJj" resultType="com.example.powerPoseTest.jungah.model.Jj">
 		<![CDATA[
         SELECT id AS "id", title AS "title", context AS "context"
-        FROM jungah
+        FROM jj
         ]]>
 	</select>
-    <select id="selectAJungah" resultType="com.example.powerPoseTest.jungah.model.Jungah">
+	
+	
+	<select id="view" resultType="com.example.powerPoseTest.jungah.model.Jj">
 		<![CDATA[
         SELECT id AS "id", title AS "title", context AS "context"
-        FROM jungah
+        FROM jj
         WHERE id = #{id}
         ]]>
 	</select>
-    <update id="updateJungah" parameterType="hashmap">
+	  <update id="updateJj" parameterType="hashmap">
 		<![CDATA[
-        UPDATE jungah
+        UPDATE jj
         SET title   = #{title},
             context = #{context}
         WHERE id = #{id}
         ]]>
 	</update>
-    <delete id="deleteJungah">
+	
+	<delete id="deleteJj">
 	<![CDATA[
         DELETE
-        FROM jungah
+        FROM jj
         WHERE id = #{id}
         ]]>
 	</delete>

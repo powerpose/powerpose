@@ -5,8 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Jungah {
-	private int id;
-	private String title;
-	private String context;
+public class Jj {
+   private int id;
+   private String title;
+   private String context;
 }
