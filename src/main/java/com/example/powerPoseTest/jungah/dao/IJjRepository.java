@@ -2,6 +2,7 @@ package com.example.powerPoseTest.jungah.dao;
 
 import java.util.List;
 
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -16,6 +17,7 @@ public interface IJjRepository {
    Jj view (int id);
    void insertJj(@Param("title") String title, @Param("context") String context);
  void updateJj(@Param("id") int id,@Param("title") String title, @Param("context") String context);
- void deleteJj(@Param("id") int id);
+ void delete(@Param("id") int id);
 
+  
 }

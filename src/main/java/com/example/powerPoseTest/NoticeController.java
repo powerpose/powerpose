@@ -42,8 +42,9 @@
   
   }
   
-  @RequestMapping(value="/delete/{noticeId}", method=RequestMethod.GET) public
-  String deleteNotice(@PathVariable int noticeId) {
+  @RequestMapping(value="/delete/{noticeId}", method=RequestMethod.GET)
+  public String deleteNotice(@PathVariable int noticeId) {
   System.out.println("noticeId:" + noticeId);
-  noticeService.deleteNotice(noticeId); return "redirect:/"; } }
+  noticeService.deleteNotice(noticeId); 
+  return "redirect:/"; } }
  

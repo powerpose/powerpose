@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.powerPoseTest.jungah.dao.IJjRepository;
 import com.example.powerPoseTest.jungah.model.Jj;
 
+
 @Service
 public class JjService implements IJjService {
 
@@ -31,7 +32,7 @@ public class JjService implements IJjService {
 	    }
 	    
 	  @Override
-	    public void deleteJj(int id) {
-	        jjRepository.deleteJj(id);
+	    public void delete(int id) {
+	        jjRepository.delete(id);
 	    }
 }

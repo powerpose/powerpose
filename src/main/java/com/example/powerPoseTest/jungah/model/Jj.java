@@ -9,4 +9,6 @@ public class Jj {
    private int id;
    private String title;
    private String context;
+
 }
+
