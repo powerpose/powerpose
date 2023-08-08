@@ -16,6 +16,7 @@ public interface IJjRepository {
    Jj view (int id);
    void insertJj(@Param("title") String title, @Param("context") String context);
  void updateJj(@Param("id") int id,@Param("title") String title, @Param("context") String context);
- void deleteJj(@Param("id") int id);
+ void delete(@Param("id") int id);
 
+  
 }

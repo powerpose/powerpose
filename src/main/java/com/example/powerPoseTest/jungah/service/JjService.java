@@ -31,7 +31,7 @@ public class JjService implements IJjService {
 	    }
 	    
 	  @Override
-	    public void deleteJj(int id) {
-	        jjRepository.deleteJj(id);
+	    public void delete(int id) {
+	        jjRepository.delete(id);
 	    }
 }

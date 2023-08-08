@@ -34,7 +34,7 @@
         ]]>
 	</update>
 	
-	<delete id="deleteJj">
+	<delete id="delete" parameterType="int">
 	<![CDATA[
         DELETE
         FROM jj
@@ -42,4 +42,3 @@
         ]]>
 	</delete>
 </mapper>
-

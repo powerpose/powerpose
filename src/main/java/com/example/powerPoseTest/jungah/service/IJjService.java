@@ -9,6 +9,6 @@ public interface IJjService {
 	Jj view(int id);
 	 void insertJj(String title, String context);
 	 void updateJj(int id,String title, String context);
-	 void deleteJj(int id);
+	 void delete(int id);
 
 }
